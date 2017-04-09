@@ -21,4 +21,9 @@ class TodoController
 
         Request::back();
     }
+
+    public function woops()
+    {
+        
+    }
 }
