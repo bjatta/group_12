@@ -25,6 +25,6 @@ class TodoController
     public function woops()
     {
         echo ";)";
-        echo ":(";
+        echo ":("; 
     }
 }
