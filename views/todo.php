@@ -11,7 +11,7 @@
 </form>
 <hr>
 <?php if(!empty($tasks)): ?>
-    <form action="" method="post">
+    <form action="/remove-task" method="post">
         <select name="action">
             <option value="">-- Выберите действие --</option>
             <option value="delete">Удалить</option>
@@ -20,11 +20,10 @@
             <?php foreach($tasks as $task): ?>
                 <li>
                     <input <?= $task['complete'] ? 'checked' : '' ?> type="checkbox" value="<?= $task['id'] ?>" >
-                    <?= $task['title'] ?>
+                    <?= $task['title'] ?><hr><p><?= $task['description'] ?></p>
                 </li>
             <?php endforeach; ?>
         </ul>
-
         <button>клац</button>
     </form>
 <?php endif; ?>
